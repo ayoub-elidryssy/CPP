@@ -1,10 +1,10 @@
-NAME = replace
+NAME = Harl
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-OBJ = main.o Clsrpl.o
+OBJ = main.o Harl.o
 
 all : $(NAME)
 

@@ -1,18 +1,12 @@
-#include <iostream>
-#include <fstream>
+#include "Clsrpl.hpp"
 
 int main(int ac, char **av)
 {
-	(void)ac;
-	(void)av;
-	std::fstream Myfile;
-
-	Myfile.open("Myfile",  std::ios::out);
-	if (Myfile)
+	if (ac < 4)
 	{
-		Myfile << "hie I'm going to do a simple test ||| ";
-		Myfile << "in this file named Myfile\n";
+		std::cout<<"parameters not complet"<<"\n";
+		return (0);
 	}
-	Myfile.close();
-	system("cat Myfile");
+	Clsrpl	rpl(av[1], av[2], av[3]);
+	rpl.replace();
 }
