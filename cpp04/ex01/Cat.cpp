@@ -14,6 +14,7 @@ Cat::Cat(const std::string& _type): Animal(type){
 
 Cat::Cat(const Cat& other): Animal(other){
     std::cout<<"Cat-> Copy Constuctor Called\n";
+    ptr_brain = new Brain;
     *this = other;
 }
 
@@ -25,7 +26,7 @@ Cat& Cat::operator=(const Cat& other){
     }
     return *this;
 }
-void Cat::makeSound() const{
+void Cat::makeSound(){
     std::cout<<"CatSound-> Miio Miio Miio\n";
 }
 

@@ -1,10 +1,11 @@
-NAME = H_work
+NAME = Character
 
 CXX = c++
 
 CPPFLAGS = -Wall -Wextra -Werror
 
-OBJ = main.o
+OBJ = main.o Character.o AMateria.o Cure.o Ice.o Box.o\
+ICharacter.o IMateriaSource.o MateriaSource.o
 
 all: $(NAME)
 

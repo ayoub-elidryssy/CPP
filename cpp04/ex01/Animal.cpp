@@ -29,7 +29,7 @@ const std::string& Animal::getType() const{
     return type;
 }
 
-void Animal::makeSound() const{
+void Animal::makeSound(){
     std::cout<<"!!! You should not call this method !!!\n";
 }
 

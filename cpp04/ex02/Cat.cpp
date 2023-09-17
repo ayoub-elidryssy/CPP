@@ -14,6 +14,7 @@ Cat::Cat(const std::string& _type): Animal(type){
 
 Cat::Cat(const Cat& other): Animal(other){
     std::cout<<"Cat-> Copy Constuctor Called\n";
+    ptr_brain = new Brain;
     *this = other;
 }
 

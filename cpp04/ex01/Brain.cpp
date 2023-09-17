@@ -18,7 +18,7 @@ Brain::Brain(const Brain& other){
 }
 
 Brain& Brain::operator=(const Brain& other){
-    std::cout<<"Brain-> Copy Assignement operator Called\n";
+    std::cout<<"Brain-> Copy Assignement Called\n";
     if (this != &other){
         for (int i = 0; i < 100; i++)
             arry[i] = other.getadea(i);

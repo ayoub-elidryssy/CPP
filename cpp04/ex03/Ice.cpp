@@ -1,32 +1,34 @@
 #include "Ice.hpp"
 
 Ice::Ice(){
-    std::cout<<"Ice: defult Consructor Called\n";
+    // std::cout<<"Ice: Defult Consructor Called\n";
     type = "ice";
 }
 
-Ice::Ice(const std::string& n_type){
+Ice::Ice(const std::string& n_type): AMateria(n_type){
+    // std::cout<<"Ice: Copy Consructor Called\n";
     type = n_type;
 }
 
-Ice::Ice(const Ice& oth){
+Ice::Ice(const Ice& oth): AMateria(oth){
     *this = oth;
 }
 
 AMateria* Ice::clone() const{
-    return (new Ice(*this));
+    return (new Ice(type));
 }
 
 Ice& Ice::operator=(const Ice& oth){
     if (this != &oth){
         type = oth.getType();
     }
+    return *this;
 }
 
-void use(ICharacter& target){
-    std::cout<<"* shoots an ice bolt at "<<"target *\n";
+void Ice::use(ICharacter& target){
+    std::cout<<"* shoots an ice bolt at "<<target.getName()<<" *\n";
 }
 
 Ice::~Ice(){
-    std::cout<<"Ice: Destructor Called\n";
+    // std::cout<<"Ice: Destructor Called\n";
 }

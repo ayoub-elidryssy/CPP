@@ -12,7 +12,7 @@ public:
     Cat(const std::string& _type);
     Cat(const Cat& other);
     Cat& operator=(const Cat& other);
-    void makeSound() const;
+    void makeSound();
     ~Cat();
 };
 
