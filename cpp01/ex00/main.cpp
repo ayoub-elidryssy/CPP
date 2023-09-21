@@ -4,10 +4,12 @@ int	main()
 {
 	Zombie zombie("zombi1");
 	Zombie *ptr_zombie;
-	zombie.announce();
-	ptr_zombie = newZombie("ga3fer");
+	randomChump("random_zombie");
+	std::cout<<"------------\n\n";
+	ptr_zombie = newZombie("NewZombie");
 	ptr_zombie->announce();
-	std::cout<<"||||||\n||||||\n";
 	delete ptr_zombie;
+	std::cout<<"------------\n\n";
+	zombie.announce();
 
 }

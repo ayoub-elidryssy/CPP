@@ -9,12 +9,9 @@ private:
 	std::string	name;
 	Weapon		*W;
 public:
-	HumanB(std::string H_name)
-	{
-		name = H_name;
-	}
-	void	attack();
+	HumanB(std::string H_name);
 	void	setWeapon(Weapon &W1);
+	void	attack();
 };
 
 

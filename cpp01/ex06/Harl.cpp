@@ -1,5 +1,8 @@
 #include "Harl.hpp"
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wimplicit-fallthrough"
+
 void	Harl::debug(void)
 {
 	std::cout<<"$$-> name of level is debug\n";
@@ -23,23 +26,24 @@ void	Harl::error(void)
 void	Harl::complain(std::string level)
 {
 	int	index;
-	if (level != "debug" && level != "info" && level != "warning" && level != "error"){
-		std::cout<<"<< "<<level<<" >> : invalid level\n";
-		return ;
-	}
-	index = (level == "debug") * 0 + (level == "info") + (level == "warning") * 2
-		+ (level == "error") * 3;
+
+	index = (level == "debug") + (level == "info")*2
+		+ (level == "warning")*3 + (level == "error")*4;
 	switch (index)
 	{
-		case 0:
-			std::cout<<"the message send is debug\n";
 		case 1:
-			std::cout<<"the message send is info\n";
+			debug();
 		case 2:
-			std::cout<<"the message send is warning\n";
+			info();
 		case 3:
-			std::cout<<"the message send is error\n";
+			warning();
+		case 4:
+			error();
+			break;
 		default:
+			std::cout<<"<< "<<level<<" >> : invalid level\n";
 			break;
 	}
 }
+
+#pragma GCC diagnostic pop

@@ -7,7 +7,7 @@ int	main()
 
 	N = 5;
 	Zomb = zombieHorde(N,"ge3fer");
-	for (int i =0;i < N;i++)
+	for (int i=0;i < N;i++)
 		Zomb[i].announce();
 	delete[] Zomb;
 }

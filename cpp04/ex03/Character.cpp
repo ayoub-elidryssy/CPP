@@ -43,6 +43,7 @@ std::string const & Character::getName() const{
 }
 
 void Character::equip(AMateria* m){
+
     if (x < 4)
         slots[x++] = m;
     else
@@ -66,6 +67,6 @@ void Character::use(int idx, ICharacter& target){
 Character::~Character(){
     // std::cout<<"Character Destructor Called\n";
     for (int i = 0; i < x; i++)
-        delete slots[i];
+         box->add(slots[i]);
     delete box;
 }

@@ -1,0 +1,15 @@
+#include "Bureaucrat.hpp"
+
+int main()
+{
+    try{
+
+        Bureaucrat B1("Dwawiny", 32);
+        B1.decrmntGrade();
+        std::cout<<B1<<std::endl;
+    }
+    catch (std::exception& exp){
+        std::cout<<exp.what()<<std::endl;
+    }
+    return 0;
+}

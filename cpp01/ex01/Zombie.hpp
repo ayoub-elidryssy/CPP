@@ -8,17 +8,9 @@ class Zombie
 private:
 	std::string name;
 public:
-	void	set_name(std::string name1)
-	{
-		name = name1;
-	}
+	void	set_name(std::string name1);
 	void	announce(void);
-
-	~Zombie()
-	{
-		std::cout<<"zombie : "<<name<<" is destroyed\n";
-	}
-
+	~Zombie();
 };
 
 Zombie* zombieHorde(int N, std::string name);
