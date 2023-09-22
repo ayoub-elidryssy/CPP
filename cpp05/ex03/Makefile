@@ -1,11 +1,11 @@
-NAME = ZForms
+NAME = ZIntern
 
 CXX = c++
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 OBJ = main.o Bureaucrat.o AForm.o PresidentialPardonForm.o\
-RobotomyRequestForm.o ShrubberyCreationForm.o
+RobotomyRequestForm.o ShrubberyCreationForm.o Intern.o
 
 all: $(NAME)
 

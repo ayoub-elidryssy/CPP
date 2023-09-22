@@ -1,11 +1,11 @@
 #include "RobotomyRequestForm.hpp"
 #include <math.h>
 
-RobotomyRequestForm::RobotomyRequestForm(){
+RobotomyRequestForm::RobotomyRequestForm(): target("robotomy request"){
     // std::cout<<"Robo_Form: Defult Constructor Called\n";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const std::string& target1): AForm("Robo_Form",72,45){
+RobotomyRequestForm::RobotomyRequestForm(const std::string& target1): AForm("robotomy request",72,45){
     target = target1;
 }
 
@@ -35,5 +35,5 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const{
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){
-    std::cout<<"Robo_Form: Destructor Constructor Called\n";
+    // std::cout<<"Robo_Form: Destructor Constructor Called\n";
 }

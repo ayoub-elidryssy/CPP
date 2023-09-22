@@ -1,11 +1,11 @@
 #include "ShrubberyCreationForm.hpp"
 
 
-ShrubberyCreationForm::ShrubberyCreationForm(): target("unamed"){
+ShrubberyCreationForm::ShrubberyCreationForm(): target("shrubbery creation"){
     // std::cout<<"Sh_Form: Defult Constructor Called\n";
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target1): AForm("Sh_Form",145,137){
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string& target1): AForm("shrubbery creation",145,137){
     target = target1;
 }
 

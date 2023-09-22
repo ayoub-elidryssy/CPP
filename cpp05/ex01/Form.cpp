@@ -9,8 +9,8 @@ const char* Form::GradeTooLowException::what() const throw(){
 }
 
 Form::Form(): name("unamed"), Signe_Grade(150), Exec_Grade(150){
+    // std::cout<<"Form: Defult Constructor Called\n";
     Signed = false;
-    std::cout<<"Form: Defult Constructor Called\n";
 }
 
 Form::Form(const std::string& n, const int& s_g, const int& e_g): name(n), Signe_Grade(s_g), Exec_Grade(e_g){
@@ -60,12 +60,13 @@ Form::~Form(){
 }
 
 std::ostream& operator<<(std::ostream& os, const Form& obj){
-    if (obj.getSigned())
-        os<<obj.getName()<<": Signed Form\n";
-    else
-        os<<obj.getName()<<": Not Signed Form\n";
+    os<<"<<  Form Name: "<<obj.getName()<<"  >>\n";
     os<<"       with Signe_Grade = "<<obj.getSigne_Grade()<<std::endl;
-    os<<"       and Exec_Grade = "<<obj.getExec_Grade()<<std::endl;
+    os<<"         and Exec_Grade = "<<obj.getExec_Grade()<<std::endl;
+    if (obj.getSigned())
+        os<<"       Status: Signed Form\n";
+    else
+        os<<"       Status: Not Signed Form\n";
     return os;
 }
 

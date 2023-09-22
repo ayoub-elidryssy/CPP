@@ -56,7 +56,7 @@ void Bureaucrat::decrmntGrade(){
 }
 
 Bureaucrat::~Bureaucrat(){
-    std::cout<<"Bureaucrat: Destructor Called\n";
+    // std::cout<<"Bureaucrat: Destructor Called\n";
 }
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj){

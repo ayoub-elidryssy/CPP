@@ -1,10 +1,10 @@
 #include "PresidentialPardonForm.hpp"
 
-PresidentialPardonForm::PresidentialPardonForm(): target("unamed"){
+PresidentialPardonForm::PresidentialPardonForm(): target("presidential pardon"){
     // std::cout<<"PR_Form: Defult Constructor Called\n";
 }
 
-PresidentialPardonForm::PresidentialPardonForm(const std::string& target1): AForm("PR_Form",25,5){
+PresidentialPardonForm::PresidentialPardonForm(const std::string& target1): AForm("presidential pardon",25,5){
     target = target1;
 }
 
