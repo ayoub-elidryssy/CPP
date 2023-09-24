@@ -10,14 +10,14 @@ int main()
 
     Intern I1;
     
-    AForm *ptr1 = I1.makeForm("robotomy request", "Car");
+    AForm *ptr1 = I1.makeForm("robotomy request1", "Car");
     std::cout<<std::endl;
     if (ptr1)
         std::cout<<*ptr1<<std::endl;
 
     try{
         if (ptr1){
-        Bureaucrat B1("Saife", 90);
+        Bureaucrat B1("Saife", 5);
         std::cout<<B1<<std::endl<<std::endl;
 
   

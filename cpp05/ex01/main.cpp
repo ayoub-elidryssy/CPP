@@ -9,7 +9,7 @@ int main()
         Bureaucrat B1("Dwawiny", 20);
         std::cout<<B1<<std::endl<<std::endl;
         
-        Form F1("Form1",20,1);
+        Form F1("Form1",20,20);
         std::cout<<F1<<std::endl;
 
         try{

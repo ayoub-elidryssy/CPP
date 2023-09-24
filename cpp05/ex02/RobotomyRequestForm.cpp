@@ -35,5 +35,5 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const{
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(){
-    std::cout<<"Robo_Form: Destructor Constructor Called\n";
+    // std::cout<<"Robo_Form: Destructor Constructor Called\n";
 }
