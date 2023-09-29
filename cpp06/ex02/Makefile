@@ -5,7 +5,7 @@ CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
-OBJ = main.o
+OBJ = main.o Base.o functions.o
 
 all: $(NAME)
 
