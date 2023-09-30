@@ -12,4 +12,5 @@ int main(){
 
     ptr2 = Serializer::deserialize(raw);
     std::cout<<"x = "<<ptr2->x<<std::endl;
+    delete ptr1;
 }

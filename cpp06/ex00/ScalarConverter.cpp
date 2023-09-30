@@ -36,7 +36,7 @@ int ScalarConverter::isInt(const std::string& arg){
 	size_t i = 0;
 	while (arg[i] == ' ')
 			i++;
-	if (i < arg.length() && arg[i] == '-')
+	if (i < arg.length() && (arg[i] == '-' || arg[i] == '+'))
 		i++;
 	while (i < arg.length()){
 		if (!std::isdigit(arg[i++]))
@@ -51,7 +51,7 @@ int ScalarConverter::isFraction(const std::string& arg){
 	int point = 0;
 	while (arg[i] == ' ')
 			i++;
-	if (i < arg.length() && arg[i] == '-')
+	if (i < arg.length() && (arg[i] == '-' || arg[i] == '+'))
 		i++;
 	if (i < arg.length() && arg[i] == '.')
 		return 0;
@@ -84,9 +84,13 @@ void ScalarConverter::display(const double& x, const std::string& arg){
 		std::cout<<"float: "<<f_v<<"f\n";
 		std::cout<<"double: "<<d_v<<"\n";
 	}
-	else{
+	else if (isChar(arg)){
 		std::cout<<"float: "<<f_v<<".0f\n";
 		std::cout<<"double: "<<d_v<<".0\n";
+	}
+	else{
+		std::cout<<"float: "<<x<<".0f\n";
+		std::cout<<"double: "<<x<<".0\n";
 	}
 }
 
@@ -130,7 +134,7 @@ void ScalarConverter::convert(const std::string& arg){
 	}
 	else if (isFraction(arg)){
 		if (arg[arg.length()-1] == 'f'){
-			f_v = strtof(arg.c_str(), NULL);
+			f_v = strtod(arg.c_str(), NULL);
 			c = static_cast<char>(f_v);
 			i_v = static_cast<int>(f_v);
 			d_v = static_cast<double>(f_v);
