@@ -7,10 +7,10 @@
 int main(int, char**)
 {
 
-    Array<std::string> tab(5);
-    Array<std::string> tab1(2);
 
     try{
+        Array<std::string> tab(-5);
+        Array<std::string> tab1(2);
          for (int i = 0; i < 5; i++)
             tab[i] = "abcdefjhigklmn"[i%10];
         for (int i = 0; i < 5; i++)

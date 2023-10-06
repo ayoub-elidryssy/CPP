@@ -1,11 +1,11 @@
-NAME = Buraucrat
+NAME = span
 
 CXX = c++
 
-CPPFLAGS = #-Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
-OBJ = main.o Bureaucrat.o
+OBJ = main.o Span.o
 
 all: $(NAME)
 

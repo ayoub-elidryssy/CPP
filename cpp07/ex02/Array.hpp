@@ -35,12 +35,12 @@ public:
 		}
 		return *this;
 	}
-	T& operator[](long index){
+	T& operator[](long index) const{
 		if (!len || index < 0 || index >= len)
 			throw std::out_of_range("index out of range");
 		return (array[index]);
 	}
-	unsigned int size(){
+	unsigned int size() const{
 		return len;
 	}
 	~Array(){

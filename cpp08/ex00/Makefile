@@ -1,11 +1,11 @@
-NAME = Buraucrat
+NAME = easyfind
 
 CXX = c++
 
-CPPFLAGS = #-Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 
-OBJ = main.o Bureaucrat.o
+OBJ = main.o
 
 all: $(NAME)
 

@@ -5,4 +5,5 @@ int main(){
     for (int i = 0 ; i < 10 ; i++)
         ptr[i] = i*i+4*i-2;
     iter(ptr, 10, ft_aply<long>);
+    delete ptr;
 }
