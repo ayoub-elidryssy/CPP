@@ -12,7 +12,7 @@ long easyfind(T array, int second){
 		return indx;
 	}
 	std::cout<<"the Second parameter Not exist in the array"<<std::endl;
-	return indx;
+	return -1;
 }
 
 #endif

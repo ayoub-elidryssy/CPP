@@ -43,17 +43,16 @@ std::string const & Character::getName() const{
 }
 
 void Character::equip(AMateria* m){
-
     if (x < 4)
         slots[x++] = m;
-    else
-        box->add(m);
+    // else
+    //     box->add(m);
 }
 
 void Character::unequip(int idx){
     if (idx >= 0 && idx < x){
-        if (slots[idx])
-		    box->add(slots[idx]);
+    //     if (slots[idx])
+	// 	    box->add(slots[idx]);
         slots[idx] = NULL;
     }
 }

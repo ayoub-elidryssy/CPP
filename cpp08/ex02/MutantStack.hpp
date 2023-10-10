@@ -2,13 +2,12 @@
 #define MUTANTSTACK
 
 #include <iostream>
-#include <vector>
-#include <limits>
-#include <vector>
-#include <list>
-#include <stack>
 #include <algorithm>
 #include <exception>
+#include <vector>
+#include <limits>
+#include <list>
+#include <stack>
 
 template<class T>
 class MutantStack: public std::stack<T>
@@ -23,8 +22,14 @@ public:
 		*this = oth;
 	}
 	MutantStack& operator=(const MutantStack& oth){
-		*this->operator=(oth); 
+		std::stack<T>::operator=(oth); 
 		return *this;
+	}
+	iterator begin(){
+		return this->c.begin();
+	}
+	iterator end(){
+		return this->c.end();
 	}
 	~MutantStack(){
 		;

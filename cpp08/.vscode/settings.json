@@ -1,5 +1,8 @@
 {
-	"files.associations": {
-		"exception": "cpp"
-	}
+    "files.associations": {
+        "stack": "cpp",
+        "iostream": "cpp",
+        "list": "cpp",
+        "ostream": "cpp"
+    }
 }

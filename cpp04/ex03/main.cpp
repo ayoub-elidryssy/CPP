@@ -41,10 +41,14 @@ int main()
     AMateria* tmp;
     tmp = src->createMateria("ice");
     me->equip(tmp);
-    me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);
     me->equip(tmp);
+    tmp = src->createMateria("cure");
+    me->equip(tmp);
+    tmp = src->createMateria("cure");
+    me->equip(tmp);
+    tmp = src->createMateria("cure");
     me->equip(tmp);
     me->equip(tmp);
 
@@ -57,5 +61,6 @@ int main()
     delete bob;
     delete me;
     delete src;
+    system("leaks Character");
     return 0;
 }

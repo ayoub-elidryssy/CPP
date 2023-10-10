@@ -1,10 +1,9 @@
+#include <algorithm>
+#include <exception>
 #include <iostream>
 #include <vector>
 #include <limits>
-#include <vector>
 #include <list>
-#include <algorithm>
-#include <exception>
 
 #ifndef SPAN_HPP
 #define SPAN_HPP

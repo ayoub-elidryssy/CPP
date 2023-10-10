@@ -31,10 +31,10 @@ int Span::shortestSpan() const{
     int min = std::numeric_limits<int>::max();
 	std::vector<int> SortedContiner = cntiner;
 	std::sort(SortedContiner.begin(), SortedContiner.end());
-    if (len < 2){
+    if (cntiner.size() < 2){
         throw std::out_of_range("No Span possible");
     }
-	for (unsigned int i = 0; i + 1 < len; i++){
+	for (unsigned int i = 0; i + 1 < cntiner.size(); i++){
 		if (SortedContiner[i+1] - SortedContiner[i] < min)
 			min = SortedContiner[i+1] - SortedContiner[i];
 	}
@@ -42,7 +42,7 @@ int Span::shortestSpan() const{
 }
 
 int Span::longestSpan() const{
-    if (len < 2)
+    if (cntiner.size() < 2)
         throw std::out_of_range("No Span possible");
     int max = *std::max_element(cntiner.begin(), cntiner.end());
     int min = *std::min_element(cntiner.begin(), cntiner.end());
