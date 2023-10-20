@@ -25,8 +25,10 @@ void PmergeMe::is_valid(const std::string& arg){
 	size_t a = 0;
 	while (a < arg.size() && arg[a] == ' ')
 		a++;
-	if (a+1 < arg.size() && arg[a] == '+')
+	if (arg[a] == '+')
 		a++;
+	if (a == arg.size())
+		error_handle("invalid argement");
 	for (size_t i = a; i < arg.size(); i++)
 		if (!isdigit(arg[i]))
 			error_handle("invalid argement");

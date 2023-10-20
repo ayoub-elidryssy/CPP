@@ -30,6 +30,8 @@ ___
     - **(3)** do the operation over the tow numbers
     - **(4)** check that the programe work as a RPN system
 
+### References
+[Reverse-Polish-Notation](https://www.dcode.fr/reverse-polish-notation?__r=1.47a10a0cb29e5529e8787275128f0dcd)
 
 <div align=center>
 <h1>ex02:  PmergeMe</h1>
