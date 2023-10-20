@@ -21,10 +21,10 @@ int main(){
         std::cout<<"ShortestSpan = "<<span.shortestSpan()<<std::endl;
         std::cout<<"LongestSpan  = "<<span.longestSpan()<<std::endl;
         std::list<int> A;
+        std::cout<<std::endl;
         for (size_t i = 0; i < 5; i++){
             A.push_back(i);
         }
-        
         span.add(A.begin(), A.end());
         span.display();
     }
